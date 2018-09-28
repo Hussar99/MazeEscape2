@@ -35,4 +35,18 @@ public class PLayer : MonoBehaviour {
 
 
 	}
+
+
+    // OnCollisionEnter2D
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the thing we bumped in to is an enemy
+        if (collision.collider.GetComponent<Enemy>())
+        {
+            // die
+            Destroy(gameObject);
+        }
+    } 
+    //  OnCollisionEnter2D 
+
 }
